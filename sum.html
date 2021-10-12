@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+
+<body>
+    <div>
+        <legend>Sum and Multiplication</legend>
+
+        <dl>
+            <dt>1st number</dt>
+            <dd><input type="number" id="txtnum1"></dd>
+        </dl>
+        <dl>
+            <dt>2nd number</dt>
+            <dd><input type="number" id="txtnum2"></dd>
+        </dl>
+        <dl>
+            <dt>3rd number</dt>
+            <dd><input type="number" id="txtnum3"></dd>
+        </dl>
+        <br>
+        <select id="manupulation">
+            <option value="Choose">Choose the option</option>
+            <option value="Sum">Sum</option>
+            <option value="Mul">Multiplication</option>
+        </select>
+        <br>
+        <br>
+        <button onclick="submit()">Submit</button>
+        <br>
+        <br>
+    </div>
+    <span>
+       <h1 id="result">Your output is</h1>
+    </span>
+     <script>
+    
+    
+    function submit() {
+      let num1 =document.getElementById("txtnum1").value;
+      let num2 = document.getElementById("txtnum2").value;
+    let num3 = document.getElementById("txtnum3").value;
+      var ab = document.getElementById("manupulation").value;
+      var res=document.getElementById("result");
+      
+        console.log(ab);
+        if(ab=="Sum"){
+      
+     res.innerHTML =Number(num1)+Number(num2)+Number(num3);
+        }
+        else {
+            var mul = num1*num2*num3
+            res.innerHTML = mul;
+        }
+    }
+</script>
+</body>
+
+</html>
